@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multimedia HTML 5</title>
+</head>
+
+<body>
+	<h2>HTML 5 - mengolah File multimedia</h2>
+	<button onclick="playVid()" type="button">Play Video</button>
+		<button onclick="pauseVid()" type="button">Pause Video</button>
+		<button onclick="durationVid()" type="button">Video Duration</button>
+		<button onclick="enableControls()" type="button">Enable Controls</button>
+		<button onclick="disableControls()" type="button">Disabled Controls</button>
+		<button onclick="checkControls()" type="button">Check Controls</button>
+		</br>
+	<video width="320" id="myVideo">
+		<source src="aud.mp3" type="video/mp4">
+</body>
+
+<script>
+	var vid = document.getElementById("myVideo");
+
+	function playVid() {
+		vid.play();
+	}
+	
+	function pauseVid() {
+		vid.pause();
+	}
+	
+	function durationVid() {
+		alert(vid.duration)
+	}
+	
+	function enableControls() {
+		vid.controls = true;
+		vid.load();
+	}
+
+	function disableControls() {
+		vid.controls = false;
+		vid.load();
+	} 
+	
+	function checkControls() {
+		alert(vid.controls)
+	}
+</script>
+</html>
